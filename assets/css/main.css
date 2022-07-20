@@ -12,6 +12,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
 body {
   font-size: 15px;
+  position: relative;
 }
 .font-alata {
   font-family: 'Alata', sans-serif;
@@ -22,6 +23,150 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
 }
+
+/* navigation-bar */
+.navigation-bar {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  padding: 5px 20px;
+  top: 0;
+  z-index: 2;
+}
+.navigation-bar .container {
+  padding-top: 10px;
+  display: flex;
+}
+.navigation-bar .navbar-brand {
+  display: flex;
+  z-index: 4;
+}
+
+.navigation-bar .navbar-toggler:hover,
+.navigation-bar .navbar-toggler:focus {
+  outline: none;
+}
+
+.navigation-bar .navbar-toggler {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  pointer-events: visible;
+  width: 40px;
+  height: 30px;
+  outline: none;
+  margin-right: 8px;
+  z-index: 5;
+}
+.navigation-bar .navbar-toggler span {
+  content: '';
+  background-color: var(--white);
+  border-radius: 1px;
+  display: block;
+  position: absolute;
+  right: 2px;
+  width: 34px;
+  height: 3px;
+  transform-origin: 50% 50%;
+  transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
+    transform 0.2s linear;
+}
+
+.navigation-bar .navbar-toggler span:before,
+.navigation-bar .navbar-toggler span:after {
+  content: '';
+  background-color: var(--white);
+  border-radius: 1px;
+  display: block;
+  height: 3px;
+  position: absolute;
+  transform-origin: 50% 50%;
+  transition: brackgroud-color 0.2s ease-in-out, top 0.2s ease-out,
+    transform 0.2s linear;
+  width: 34px;
+}
+.navigation-bar .navbar-toggler span:before {
+  top: 8px;
+}
+.navigation-bar .navbar-toggler span:after {
+  top: -8px;
+}
+
+.navigation-bar .navbar-toggler.active span {
+  background-color: transparent;
+}
+
+.navigation-bar .navbar-toggler.active span:before,
+.navigation-bar .navbar-toggler.active span:after {
+  transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
+}
+
+.navigation-bar .navbar-toggler.active span:before {
+  top: 0;
+  transform: rotate3d(0, 0, 1, -45deg);
+}
+
+.navigation-bar .navbar-toggler.active span:after {
+  top: 0;
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+
+.navigation-bar .navbar-collapse {
+  flex-basis: 100px;
+  flex-grow: 1;
+  align-items: center;
+  z-index: 1;
+  transition: brackgroud-color 0.2s ease-in-out, top 0.2s ease-out,
+    transform 0.2s linear;
+}
+.navigation-bar .navbar-collapse.show {
+  height: 100vh;
+  background-color: var(--black);
+  min-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  transition: brackgroud-color 0.2s ease-in-out, top 0.2s ease-out,
+    transform 0.2s linear;
+  padding: 20px;
+}
+
+.navigation-bar .collapse:not(.show) {
+  display: none;
+}
+.navigation-bar .navbar-nav {
+  color: var(--white);
+  text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-left: 15px;
+  list-style: none;
+}
+
+.navigation-bar .navbar-nav li {
+  margin-bottom: 32px;
+}
+
+.navigation-bar .navbar-nav a {
+  color: var(--white);
+  font-weight: 300;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
 /* Hero */
 .card-hero-overlay {
   position: relative;
