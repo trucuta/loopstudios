@@ -37,7 +37,6 @@ body .not-scroll {
 /* navigation-bar */
 .main-header {
   background-color: transparent;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   padding-top: 20px;
   position: fixed;
   width: 100%;
@@ -45,6 +44,11 @@ body .not-scroll {
   top: 0;
   left: 0;
   z-index: 3;
+}
+.main-header.scrolled {
+  background-color: var(--black);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
 }
 
 .navigation-bar {
@@ -230,6 +234,50 @@ body .not-scroll {
 .card-hero-overlay .content-hero h1 {
   margin: 0;
 }
+/* end hero */
+
+/* Who We Are */
+#who-we-are {
+  padding: 3rem 15px;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+#who-we-are .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+  padding-top: 3rem;
+}
+
+#who-we-are .row .column {
+  flex: 1 1 50%;
+  padding: 0 15px;
+}
+#who-we-are .picture-image {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+#who-we-are .picture-image img {
+  width: 100%;
+}
+#who-we-are .content-text-description {
+  text-align: center;
+  color: var(--black);
+}
+#who-we-are .content-text-description h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+#who-we-are .content-text-description p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--dark-gray);
+  margin: 0;
+}
+/* End Who We Are */
 
 /** Media query tablet */
 @media (min-width: 768px) {
@@ -320,7 +368,41 @@ body .not-scroll {
   .card-hero-overlay .content-hero h1 {
     font-size: 4.5rem;
   }
+
+  /* Who We Are Desktop */
+  #who-we-are .row {
+    gap: 20px;
+    padding-top: 3rem;
+  }
+
+  #who-we-are .row .column:first-of-type {
+    max-width: 60%;
+  }
+  #who-we-are .row .column:nth-of-type(2) {
+    display: flex;
+    align-items: flex-end;
+    max-width: 40%;
+  }
+  #who-we-are .content-text-description {
+    background-color: var(--white);
+    margin-left: -50%;
+    margin-bottom: -8%;
+    padding: 2rem 5px 2rem 5rem;
+    text-align: left;
+    max-width: 630px;
+  }
+  #who-we-are .content-text-description h2 {
+    font-size: 3.2rem;
+    font-weight: 400%;
+  }
+
+  #who-we-are .content-text-description p {
+    font-size: 1.1rem;
+    font-weight: 400%;
+  }
 }
+
+/* End Who We Are Desktop */
 /* end Media query desktop */
 
 /*  Media query desktop  > 1440px */
