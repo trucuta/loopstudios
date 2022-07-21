@@ -192,6 +192,10 @@ body .not-scroll {
   overflow: hidden;
 }
 
+.card-hero-overlay .container {
+  justify-content: center;
+}
+
 .card-hero-overlay .card-img {
   min-height: 100%;
   object-fit: cover;
@@ -245,6 +249,9 @@ body .not-scroll {
   }
   .navigation-bar .container {
     justify-content: space-between;
+  }
+  .card-hero-overlay .container {
+    justify-content: flex-start;
   }
 }
 /* end Media query tablet */
