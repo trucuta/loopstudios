@@ -188,6 +188,8 @@ body.not-scroll {
   text-decoration: none;
   position: relative;
 }
+.navigation-bar .navbar-nav a:hover::before,
+.navigation-bar .navbar-nav a:focus::before,
 .navigation-bar .navbar-nav a.active::before {
   content: '';
   border-radius: 1px;
